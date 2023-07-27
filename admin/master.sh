@@ -6,8 +6,10 @@
 
 # init k8s
 # --apiserver-advertise-address=192.168.10.210
+# 还是需要强行指定 下image-repository
 sudo kubeadm init \
     --pod-network-cidr=10.10.0.0/16 \
+    --image-repository=registry.aliyuncs.com/google_containers \
     --kubernetes-version=v1.23.3 \
     --v=5
 
