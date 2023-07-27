@@ -14,6 +14,9 @@ sudo kubeadm init \
     --v=5
 
 # enable kubectl
+# tb@tb:~$ kubectl get node
+# The connection to the server localhost:8080 was refused - did you specify the right host or port?
+
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
