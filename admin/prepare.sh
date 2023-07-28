@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # chrono @ 2022-04
-
+# 入门准备看这个更清楚 https://blog.csdn.net/weixin_43168190/article/details/107223600
+使用VMware虚拟机搭建Kubernetes的Master和Worker节点 最全教程（1）准备工作
 # https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 # https://kubernetes.io/zh/docs/setup/production-environment/container-runtimes/#docker
 
