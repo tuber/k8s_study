@@ -20,6 +20,8 @@ sudo kubeadm init \
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+echo 'export KUBECONFIG=$HOME/admin.conf' >> $HOME/.bashrc
+
 
 # check
 kubectl version
@@ -27,7 +29,10 @@ kubectl get node
 
 # kubeadm join 192.168.10.210:6443 --token tlx8h6.nqq9ae0x6n311ur2 \
 #   --discovery-token-ca-cert-hash sha256:3ad1e8a51484ec125e2394f03eb3c0429f467a88b432a9408faef6d00f197e87
-
+# 如果忘了了master的join 信息也没关系，可以执行 
+# kubeadm token create --print-join-command
+# 如果没有信息，或者过期了，可以执行
+# kubeadm token create
 # get join token
 # kubeadm token list
 # kubeadm token create --print-join-command
